@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel= "stylesheet" type="text/css" href="{{url_for('static',filename='CSS/style.css')}}"/>
+</head>
+<body>
+
+<div class="header">
+<img src="{{url_for('static',filename='image/hag.logo.png')}}" width="300" height="100"  />
+</div>
+
+<div class="topnav">
+  <a href="/home">HOME</a>
+  <a href="/about">ABOUT</a>
+  <a href="/health">HEALTH</a>
+  <a class="active"href="/weather">WEATHER</a>
+</div>
+
+<div class="main"
+<div>
+<a class="weatherwidget-io" href="https://forecast7.com/en/51d51n0d13/london/" data-label_1="LONDON" data-label_2="WEATHER" data-theme="original" >LONDON WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+</div>
+
+<div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray = ["Air Pollution", "Clear air"];
+const yArray = [55, 49, 44, 24, 15];
+
+const layout = {title:"Air quality"};
+
+const data = [{labels:xArray, values:yArray, type:"pie"}];
+
+Plotly.newPlot("myPlot", data, layout);
+</script>
+</div> <!-- Flexible space to make the layout fill the page -->
+
+<div>
+  <style>
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+.bar-6 {width: 30%; height: 18px; background-color: pink;}
+.bar-7 {width: 80%; height: 18px; background-color: purple;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div>Daily steps<div>
+<br><br>
+<div class="row">
+  <div class="side">
+    <div>Monday</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6k</div>
+  </div>
+
+  <div class="side">
+    <div>Tuesday</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>3k</div>
+  </div>
+
+  <div class="side">
+    <div>Wednesday</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>2k</div>
+  </div>
+
+
+  <div class="side">
+    <div>Thurday</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>1k</div>
+  </div>
+
+
+  <div class="side">
+    <div>Friday</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>4k</div>
+  </div>
+</div>
+
+  <div class="side">
+    <div>Sat</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-6"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>3k</div>
+  </div>
+</div>
+
+  <div class="side">
+    <div>Sun</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-7"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>8k</div>
+  </div>
+</div>
+
+</div>
+<br><br>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>

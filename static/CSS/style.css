@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%; /* Ensure both html and body stretch to full height */
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  min-height: 189vh; /* this allows a consistence distance of the footer */
+  background: white;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #97D077;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: gold;
+  color: black;
+}
+
+.topnav a:active {
+  background-color: gold;
+  color: gold;
+ }
+
+ .active, topnav a:hover{
+  background-color: gold;
+  color: gold;
+ }
+
+
+/* Main content area (flexible space to fill) */
+.main {
+  flex: 1; /* Takes up all remaining space between header and footer */
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #82B366;
+}
